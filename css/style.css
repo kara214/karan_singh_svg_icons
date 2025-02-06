@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.3));
+}
+@keyframes wobble {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0); }
+}
+
+.icon:hover {
+    animation: wobble 0.5s ease-in-out;
+}
+
